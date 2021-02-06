@@ -1,0 +1,386 @@
+/* Custom Styles */
+:root {
+
+    --clr-neutral-900: #000000bf;
+    --clr-neutral-100: #ffffff;
+    --clr-accent-light: #271bd5;
+    --clr-accent-dark: #22222e;
+
+    --ff-primary: 'Kanit', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class] {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Utility Classes */
+.flow-content--small > * + * {
+    margin-top: .25em;
+
+}
+
+.flow-content--small > p {
+    /* border: solid red 2px; */
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.flow-content--reg > * + * {
+    margin-top: 1.5em;
+}
+
+div.flow-content--reg {
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+.flow-content--small {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+    /* border: solid 2px green;  */
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.thin {
+    font-weight: var(--fw-light);
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 3.5rem;
+
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.btn, 
+.btn-light {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    color: var(--clr-neutral-900);
+    border: 3.5px solid var(--clr-neutral-900);
+    padding: .75em 1.5em;
+}
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: 1.15rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.4;
+    color: var(--clr-neutral-900);
+    text-align: center;
+}
+
+.title {
+    /* border: solid 2px greenyellow; */
+    /* max-width: 550px; */
+    font-size: clamp(3.5rem, 5vw, 8.5rem);
+    line-height: .85;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: clamp(3.5rem, 5vw, 5.5rem);
+} 
+
+section {
+    padding: 2rem 0;
+}
+
+section > .logo {
+    display: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    width: min-content;
+    line-height: 1;
+    margin: .5rem 1rem;
+}
+
+.btn-light {
+    color: var(--clr-accent-light);
+    border: 3.5px solid var(--clr-accent-light);
+}
+
+.btn.btn-dark {
+    color: var(--clr-neutral-100);
+    border: 3.5px solid var(--clr-accent-light);
+    background-color: var(--clr-accent-light);
+}
+
+.btn:hover, 
+.btn:focus {
+    background-color: #EB7A36;
+}
+
+.btn.btn-dark:hover, 
+.btn.btn-dark:focus {
+    border: 3.5px solid #EB7A36;
+    
+}
+
+.btn-light:hover, 
+.btn-light:focus {
+    color: #EB7A36;
+    border: 3.5px solid #EB7A36;
+}
+
+.hero,
+.ride,
+.freedom {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.ride,
+.freedom {
+    justify-content: end;
+}
+
+footer {
+    background-color: var(--clr-accent-dark);
+    padding: 10.5rem 5.5rem;
+}
+
+.icon__list {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: 55%;
+    margin: 0 auto;;
+}
+
+.icon__link {
+    color: var(--clr-neutral-100);
+}
+
+.fas,
+.far {
+    font-size: 3.75rem;
+}
+
+
+
+/* Navigation */
+.nav {
+    position: fixed;
+    background: var(--clr-accent-light);
+    color: var(--clr-neutral-100);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%); /* hides the nav window by pushing it to the right 100% of its width...so slides to the right 100%*/
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-regular);
+    font-size: 3.25rem;
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: #EB7A36;
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0); /* Slides the nav window in and out */
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {/* These two --::before and ::after -- transform the hamburger into an X */
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-neutral-900);
+    width: 2rem;
+    height: 4px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {top: 6px;}
+.hamburger::after {bottom: 6px;}
+
+
+
+
+/* Screens 800px and up ---> */
+@media (min-width: 800px) {
+    body {
+        text-align: left;
+    }
+
+    header {
+        display: none;
+    }
+
+    section {
+        /* border: solid red 2px; */
+        padding: 5.75em 6em;
+    }
+
+    .split {
+        flex-direction: row;
+    }
+
+    .hero {
+        background: url(/images/skateboard-5221914_1920-small-COPY.jpg);
+    }
+
+    .ride {
+        background: url(/images/skateboarding-at-sunset.jpg);
+    }
+
+    .freedom {
+        background: url(/images/girl-skating-sunset.jpg);
+    }
+
+    .bg-full {
+        height: 75vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color:var(--clr-neutral-100);
+        /* text-align: left; */
+    }
+
+    .width-control {
+        /* border: solid 2px green;  */
+        max-width: 35rem;
+    }
+
+    div.left-align {
+        text-align: left;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .btn {
+        color: var(--clr-neutral-100);
+        border: 3.5px solid var(--clr-neutral-100);
+        background-color: rgba(39, 27, 213, 0.459);
+        backdrop-filter: blur(10px);
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        background: var(--clr-neutral-100);
+    }
+
+    .text-shadow {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.555);
+    }
+
+
+}
