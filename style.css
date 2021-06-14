@@ -148,6 +148,7 @@ section > .logo {
     width: min-content;
     line-height: 1;
     margin: .5rem 1rem;
+    text-align: left;
 }
 
 .btn-light {
@@ -201,7 +202,8 @@ footer {
     justify-content: center;
     gap: 3.5rem;
     max-width: 55%;
-    margin: 0 auto;;
+    margin: 0 auto;
+    font-size: 2rem;;
 }
 
 .icon__link {
