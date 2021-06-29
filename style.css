@@ -52,7 +52,6 @@ img {
 }
 
 .flow-content--small > p {
-    /* border: solid red 2px; */
     max-width: 450px;
     margin: 0 auto;
 }
@@ -72,7 +71,6 @@ div.flow-content--reg {
 }
 
 .container {
-    /* border: solid 2px green;  */
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
@@ -124,8 +122,6 @@ body {
 }
 
 .title {
-    /* border: solid 2px greenyellow; */
-    /* max-width: 550px; */
     font-size: clamp(3.5rem, 5vw, 8.5rem);
     line-height: .85;
     text-transform: uppercase;
@@ -184,7 +180,6 @@ section > .logo {
 .freedom {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .ride,
@@ -325,7 +320,6 @@ footer {
     }
 
     section {
-        /* border: solid red 2px; */
         padding: 5.75em 6em;
     }
 
@@ -351,11 +345,10 @@ footer {
         background-position: center center;
         background-repeat: no-repeat;
         color:var(--clr-neutral-100);
-        /* text-align: left; */
     }
 
     .width-control {
-        /* border: solid 2px green;  */
+        border: solid 2px green; 
         max-width: 35rem;
     }
 
